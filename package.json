@@ -1,0 +1,44 @@
+{
+  "name": "superspark",
+  "version": "0.1.1",
+  "description": "Convey your data with a spark",
+  "main": "index.js",
+  "scripts": {
+    "start": "start-storybook -p 9009 -s public",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "webpack --optimize-minimize && build-storybook -c .storybook -o docs",
+    "prepublish": "webpack --optimize-minimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nikek/superspark.git"
+  },
+  "keywords": [
+    "superspark",
+    "graph",
+    "vis",
+    "visualisation",
+    "minimal",
+    "react",
+    "d3"
+  ],
+  "author": "Niklas Ek <ek.niklas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikek/superspark/issues"
+  },
+  "homepage": "https://github.com/nikek/superspark#readme",
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "jest": "^19.0.2",
+    "storyshots": "^3.2.2",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "d3-scale": "^1.0.5",
+    "d3-shape": "^1.0.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
