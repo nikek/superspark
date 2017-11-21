@@ -3,6 +3,7 @@ import Area from './types/Area.jsx';
 import Bars from './types/Bars.jsx';
 import Line from './types/Line.jsx';
 import Dots from './types/Dots.jsx';
+import Threshold from './Threshold.jsx';
 import { scaleLinear } from 'd3-scale';
 
 const defaults = {
@@ -45,6 +46,7 @@ export default class SuperSpark extends React.Component {
       <svg width={p.width} height={p.height}>
         <g style={{ transform: `translate(${p.paddingX}px,${p.paddingY}px)` }}>
           {types[p.plot](p)}
+          {p.threshold && <Threshold {...p} />}
         </g>
       </svg>
     );

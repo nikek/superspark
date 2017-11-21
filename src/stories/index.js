@@ -200,6 +200,54 @@ storiesOf('SuperSpark', module)
       <SuperSpark data={realData} color="coral" plot="dots" />
     </div>
   ))
+  .add('Threshold value', () => (
+    <div>
+      <SuperSpark data={realData} threshold={{ value: 2000 }} />
+      <SuperSpark data={realData} threshold={{ value: 2000 }} plot="area" />
+      <SuperSpark data={realData} threshold={{ value: 2000 }} plot="line" />
+      <SuperSpark data={realData} threshold={{ value: 2000 }} plot="dots" />
+    </div>
+  ))
+  .add('Threshold value + above', () => (
+    <div>
+      <SuperSpark data={realData} threshold={{ value: 2000, type: 'above' }} />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'above' }}
+        plot="area"
+      />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'above' }}
+        plot="line"
+      />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'above' }}
+        plot="dots"
+      />
+    </div>
+  ))
+  .add('Threshold value + below', () => (
+    <div>
+      <SuperSpark data={realData} threshold={{ value: 2000, type: 'below' }} />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'below' }}
+        plot="area"
+      />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'below' }}
+        plot="line"
+      />
+      <SuperSpark
+        data={realData}
+        threshold={{ value: 2000, type: 'below' }}
+        plot="dots"
+      />
+    </div>
+  ))
   .add('No props', () => (
     <div>
       <SuperSpark />
