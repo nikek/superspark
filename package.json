@@ -33,12 +33,12 @@
     "@kadira/storybook": "^2.21.0",
     "jest": "^19.0.2",
     "storyshots": "^3.2.2",
-    "webpack": "^2.3.2"
+    "webpack": "^2.7.0"
   },
   "dependencies": {
-    "d3-scale": "^1.0.5",
-    "d3-shape": "^1.0.6",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "d3-scale": "^1.0.7",
+    "d3-shape": "^1.2.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   }
 }
