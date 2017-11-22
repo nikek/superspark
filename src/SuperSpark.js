@@ -1,9 +1,9 @@
 import React from 'react';
-import Area from './types/Area.jsx';
-import Bars from './types/Bars.jsx';
-import Line from './types/Line.jsx';
-import Dots from './types/Dots.jsx';
-import Threshold from './Threshold.jsx';
+import Area from './types/Area.js';
+import Bars from './types/Bars.js';
+import Line from './types/Line.js';
+import Dots from './types/Dots.js';
+import Threshold from './Threshold.js';
 import { scaleLinear } from 'd3-scale';
 
 const defaults = {

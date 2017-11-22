@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/SuperSpark.jsx',
+  entry: './src/SuperSpark.js',
   output: {
     filename: 'index.js',
     libraryTarget: 'umd'
@@ -16,9 +16,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   },
