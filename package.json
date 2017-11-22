@@ -7,8 +7,7 @@
     "start": "start-storybook -p 9009 -s public",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "build":
-      "webpack --optimize-minimize && build-storybook -c .storybook -o docs",
+    "build": "webpack --optimize-minimize && build-storybook -c .storybook -o docs",
     "prepublish": "webpack --optimize-minimize"
   },
   "repository": {
@@ -33,10 +32,11 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
-    "babel-loader": "^8.0.0-beta.0",
-    "jest": "^19.0.2",
+    "@babel/preset-react": "^7.0.0-beta.32",
     "@storybook/addon-storyshots": "3.2.16",
     "@storybook/react": "3.2.16",
+    "babel-loader": "^8.0.0-beta.0",
+    "jest": "^19.0.2",
     "webpack": "^3.8.1"
   },
   "dependencies": {
