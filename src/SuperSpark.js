@@ -13,7 +13,8 @@ const defaults = {
   color: '#2ebd59',
   plot: 'bars',
   paddingX: 5,
-  paddingY: 5
+  paddingY: 5,
+  zeroBased: true
 };
 
 const types = {
@@ -31,8 +32,12 @@ export default class SuperSpark extends React.Component {
       return <svg />;
     }
 
+    const dataValues = p.data.map(p => p.y);
     p.yScale = scaleLinear()
-      .domain([0, Math.max(...p.data.map(p => p.y))])
+      .domain([
+        p.zeroBased ? 0 : Math.min(...dataValues),
+        Math.max(...dataValues)
+      ])
       .range([p.height - p.paddingY * 2, 0]);
 
     p.xScale = scaleLinear()

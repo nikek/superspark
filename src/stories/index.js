@@ -199,7 +199,43 @@ storiesOf('SuperSpark', module)
       <SuperSpark data={realData} color="coral" plot="line" />
       <SuperSpark data={realData} color="coral" plot="dots" />
     </div>
+  ));
+
+storiesOf('SuperSpark Experiments', module)
+  .add('Pass regular data', () => (
+    <div>
+      <SuperSpark data={realData} zeroBased={false} />
+      <SuperSpark data={realData} zeroBased={false} plot="area" />
+      <SuperSpark data={realData} zeroBased={false} plot="line" />
+      <SuperSpark data={realData} zeroBased={false} plot="dots" />
+    </div>
   ))
+  .add('Two data points', () => (
+    <div>
+      <SuperSpark data={[{ x: 1, y: 1 }, { x: 2, y: 3 }]} />
+      <SuperSpark data={[{ x: 1, y: 1 }, { x: 2, y: 3 }]} plot="area" />
+      <SuperSpark data={[{ x: 1, y: 1 }, { x: 2, y: 3 }]} plot="line" />
+      <SuperSpark data={[{ x: 1, y: 1 }, { x: 2, y: 3 }]} plot="dots" />
+    </div>
+  ))
+  .add('25 data points', () => (
+    <div>
+      <SuperSpark data={twentyfive} />
+      <SuperSpark data={twentyfive} plot="area" />
+      <SuperSpark data={twentyfive} plot="line" />
+      <SuperSpark data={twentyfive} plot="dots" />
+    </div>
+  ))
+  .add('50 data points', () => (
+    <div>
+      <SuperSpark data={fifty} />
+      <SuperSpark data={fifty} plot="area" />
+      <SuperSpark data={fifty} plot="line" />
+      <SuperSpark data={fifty} plot="dots" />
+    </div>
+  ));
+
+storiesOf('SuperSpark Threshold', module)
   .add('Threshold value', () => (
     <div>
       <SuperSpark data={realData} threshold={{ value: 2000 }} />
@@ -247,7 +283,9 @@ storiesOf('SuperSpark', module)
         plot="dots"
       />
     </div>
-  ))
+  ));
+
+storiesOf('SuperSpark No Data', module)
   .add('No props', () => (
     <div>
       <SuperSpark />
